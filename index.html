@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Scientific Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Google+Sans:wght@400;500;700&family=Roboto:wght@400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <main class="calculator-card" id="calcCard">
+    <!-- Display Header -->
+    <header class="calc-header">
+      <div class="display-container">
+        <div class="expression-line" id="expDisplay" title="Current Expression"></div>
+        <div class="result-line" id="resDisplay">0</div>
+      </div>
+    </header>
+
+    <!-- Keypad Grid (7x5) -->
+    <div class="calc-keypad" id="keypad">
+      <!-- Row 1 -->
+      <button class="calc-btn mode-btn span-2" data-act="deg-rad">
+        <span class="deg-lbl">Deg</span><span class="sep">|</span><span class="rad-lbl">Rad</span>
+      </button>
+      <button class="calc-btn btn-fn" data-val="!">x!</button>
+      <button class="calc-btn btn-fn" data-act="ans">Ans</button>
+      <button class="calc-btn btn-ac" data-act="clear">AC</button>
+      <button class="calc-btn btn-fn btn-back" data-act="back" title="Backspace" aria-label="Backspace">
+        <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor">
+          <path
+            d="M22 3H7c-.69 0-1.23.35-1.59.88L0 12l5.41 8.11c.36.53.9.89 1.59.89h15c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-3 12.59L17.59 17 14 13.41 10.41 17 9 15.59 12.59 12 9 8.41 10.41 7 14 10.59 17.59 7 19 8.41 15.41 12 19 15.59z" />
+        </svg>
+      </button>
+      <button class="calc-btn btn-fn" data-val="%">%</button>
+
+      <!-- Row 2 -->
+      <button class="calc-btn btn-fn inv-btn" data-act="inv">Inv</button>
+      <button class="calc-btn btn-fn" data-val="sin(" data-inv-val="asin(">
+        <span class="std-lbl">sin</span><span class="inv-lbl">sin⁻¹</span>
+      </button>
+      <button class="calc-btn btn-fn" data-val="ln(" data-inv-val="e^(">
+        <span class="std-lbl">ln</span><span class="inv-lbl">eˣ</span>
+      </button>
+      <button class="calc-btn btn-num" data-val="7">7</button>
+      <button class="calc-btn btn-num" data-val="8">8</button>
+      <button class="calc-btn btn-num" data-val="9">9</button>
+      <button class="calc-btn btn-op" data-val="÷">÷</button>
+
+      <!-- Row 3 -->
+      <button class="calc-btn btn-fn" data-val="π">π</button>
+      <button class="calc-btn btn-fn" data-val="cos(" data-inv-val="acos(">
+        <span class="std-lbl">cos</span><span class="inv-lbl">cos⁻¹</span>
+      </button>
+      <button class="calc-btn btn-fn" data-val="log(" data-inv-val="10^(">
+        <span class="std-lbl">log</span><span class="inv-lbl">10ˣ</span>
+      </button>
+      <button class="calc-btn btn-num" data-val="4">4</button>
+      <button class="calc-btn btn-num" data-val="5">5</button>
+      <button class="calc-btn btn-num" data-val="6">6</button>
+      <button class="calc-btn btn-op" data-val="×">×</button>
+
+      <!-- Row 4 -->
+      <button class="calc-btn btn-fn" data-val="e">e</button>
+      <button class="calc-btn btn-fn" data-val="tan(" data-inv-val="atan(">
+        <span class="std-lbl">tan</span><span class="inv-lbl">tan⁻¹</span>
+      </button>
+      <button class="calc-btn btn-fn" data-val="√(" data-inv-val="^2">
+        <span class="std-lbl">√</span><span class="inv-lbl">x²</span>
+      </button>
+      <button class="calc-btn btn-num" data-val="1">1</button>
+      <button class="calc-btn btn-num" data-val="2">2</button>
+      <button class="calc-btn btn-num" data-val="3">3</button>
+      <button class="calc-btn btn-op" data-val="−">−</button>
+
+      <!-- Row 5 -->
+      <button class="calc-btn btn-fn" data-val="(">(</button>
+      <button class="calc-btn btn-fn" data-val=")">)</button>
+      <button class="calc-btn btn-fn" data-val="^" data-inv-val="^(1/">
+        <span class="std-lbl">xʸ</span><span class="inv-lbl">ʸ√x</span>
+      </button>
+      <button class="calc-btn btn-num" data-val=".">.</button>
+      <button class="calc-btn btn-num" data-val="0">0</button>
+      <button class="calc-btn btn-eq" data-act="eq">=</button>
+      <button class="calc-btn btn-op" data-val="+">+</button>
+    </div>
+  </main>
+  <script src="app.js"></script>
+</body>
+
+</html>
