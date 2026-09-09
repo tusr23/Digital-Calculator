@@ -83,6 +83,7 @@ body {
 
 .expression-line {
   font-size: 15px;
+  font-weight: 300;
   color: var(--text-muted);
   min-height: 22px;
   white-space: nowrap;
@@ -92,16 +93,15 @@ body {
 }
 
 .result-line {
-  font-size: 42px;
-  font-weight: 600;
+  font-size: 38px;
+  font-weight: 300;
   color: #fff;
   white-space: nowrap;
   overflow-x: auto;
   scrollbar-width: none;
   margin-top: 4px;
   line-height: 1.15;
-  letter-spacing: -0.5px;
-  text-shadow: 0 0 24px rgba(255, 255, 255, 0.12);
+  letter-spacing: -0.2px;
 }
 
 .expression-line::-webkit-scrollbar,
